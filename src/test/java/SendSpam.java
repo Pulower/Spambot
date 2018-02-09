@@ -17,7 +17,7 @@ public class SendSpam {
     public void setUp() {
         System.setProperty("webdriver.chrome.driver", "E:\\ChromeDriver\\chromedriver.exe");
         driver = new ChromeDriver();
-        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+        driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
         driver.get("http://www.google.pl");
         driver.manage().window().maximize();
     }
