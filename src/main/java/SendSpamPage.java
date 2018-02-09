@@ -24,7 +24,7 @@ public class SendSpamPage extends WebElementManipulator {
     @FindBy(name = "password")
     WebElement passwordField;
 
-    @FindBy(xpath = "//*[@id=\":4g\"]/div/div")
+    @FindBy(xpath = ".//*[contains(text(),'UTWÓRZ')]")////*[@id=":4g"]/div/div
     WebElement createMessage;
 
     @FindBy(name = "to")
@@ -33,10 +33,10 @@ public class SendSpamPage extends WebElementManipulator {
     @FindBy(name = "subjectbox")
     WebElement subjectBox;
 
-    @FindBy(id = ":a3")
+    @FindBy(xpath = ".//*[@role=\"textbox\"]")
     WebElement messageField;
 
-    @FindBy(id = ":8r")
+    @FindBy(xpath = ".//*[contains(text(),'Wyślij')]")
     WebElement sendBtn;
 
     @FindBy(id = "link_vsm")
