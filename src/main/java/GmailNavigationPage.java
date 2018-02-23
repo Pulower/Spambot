@@ -16,9 +16,9 @@ public class GmailNavigationPage extends WebElementManipulator {
         PageFactory.initElements(driver, this);
     }
 
-    public GmailNavigationPage createNewMessage() {
+    public GmailMailboxPage createNewMessage() {
         clickOnElement(createMessage);
-        return this;
+        return new GmailMailboxPage(driver);
     }
 
     public boolean getConfirm() {

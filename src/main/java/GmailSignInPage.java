@@ -8,7 +8,7 @@ public class GmailSignInPage extends WebElementManipulator {
     @FindBy(id = "identifierId")
     WebElement emailField;
 
-    @FindBy(className = "CwaK9")
+    @FindBy(xpath = "//span[contains(text(), 'Dalej')]")
     WebElement nextBtn;
 
     @FindBy(name = "password")

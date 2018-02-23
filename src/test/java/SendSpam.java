@@ -31,8 +31,8 @@ public class SendSpam {
         google = new GoogleMainPage(driver);
         gmail = new GmailSignInPage(driver);
         google.gotoGmail()
-                .clickSignIn();
-        gmail.enterEmail(email)
+                .clickSignIn()
+                .enterEmail(email)
                 .clickNext()
                 .enterPassword(password)
                 .clickNext();
@@ -42,8 +42,8 @@ public class SendSpam {
     public void sendSpam(String address, String subject, String message) throws IOException {
         mailbox = new GmailMailboxPage(driver);
         gmailNav = new GmailNavigationPage(driver);
-        gmailNav.createNewMessage();
-        mailbox.chooseAddress(address)
+        gmailNav.createNewMessage()
+                .chooseAddress(address)
                 .chooseSubjectAndMessage(subject, message)
                 .sendMessage();
         Assert.assertTrue(gmailNav.getConfirm());
@@ -51,7 +51,7 @@ public class SendSpam {
 
     @AfterTest
     public void tearDown() {
-        //driver.quit();
+        driver.quit();
     }
 
     @DataProvider(name = "SignInProvider")

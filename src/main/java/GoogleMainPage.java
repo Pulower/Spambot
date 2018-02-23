@@ -21,8 +21,8 @@ public class GoogleMainPage extends WebElementManipulator {
         return this;
     }
 
-    public GoogleMainPage clickSignIn() {
+    public GmailSignInPage clickSignIn() {
         clickOnElement(signInBtn);
-        return this;
+        return new GmailSignInPage(driver);
     }
 }
